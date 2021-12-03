@@ -1,0 +1,228 @@
+@charset "utf-8";
+
+
+/*
+  
+   Filename:   p_layout.css
+
+*/
+
+
+/* HTML and Body styles */
+
+html {
+   font-family: Verdana, Geneva, sans-serif;
+   height: 100%;
+}
+
+body {
+   background-color: #cad2c5;
+   color: #3c153b;
+   box-shadow: rgb(51, 51, 51) 10px 0px 40px, rgb(51, 51, 51) -10px 0px 40px;
+   border-left: 1px solid gray;
+   border-right: 1px solid gray;
+   min-height: 100%;   
+   margin: 0px auto;
+   min-width: 400px;
+   max-width: 1024px;   
+   width: 100%;
+}
+
+
+/* Header styles */
+
+header {
+    background-color: #7f7eff;
+    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+}
+
+header img#profilepicture {
+   order: 0;
+   max-height: 20%;
+   max-width: 20%;
+   border: 6px solid white;
+}
+
+header h1#title {
+   order:1;
+   align-self: center;
+   text-align: center;
+   font-size: 2em;
+   line-height: 100%;
+}
+
+header h3#contactinfo
+{
+   position: absolute;
+   right: 17vw;
+   font-size: .8em;
+}
+
+
+/* Navigation list styles */
+
+header nav {
+   order:3;
+   width: 100%;
+}
+
+header nav ul li {
+   font-size: 1em;
+   width:20%;  
+}
+
+header nav ul li a {
+   color: white;
+   display: block;
+   padding: 5px 20px;
+   width: 100%;
+}
+
+header nav ul li a:hover {
+   color: black;
+}
+
+a#navicon {
+   display: none;
+}
+
+/* Column Styles */
+section#leftbar
+{
+    clear: left;
+    float: left;
+    padding: 1%;
+    width: 15%;
+    height:100%;
+    position: fixed;
+    background: #60594d;
+    font-size: 10%vw;
+    color:white;
+}
+
+section#portfolio
+{
+    position:absolute;
+    padding-top: 2%;
+    padding-left: 18%;
+    display: flex;
+    flex-direction: column;
+
+}
+div.chapters > div
+{ 
+    display: flex;
+    flex-direction: column;
+    display: none;
+    
+    
+}
+section#portfolio > .chapters > div > img
+{
+    width:30%;
+    height:30%;
+    align-self: center;
+}
+
+/* Footer styles */   
+
+footer {
+   clear: both;
+   
+   color: white;    
+   background: linear-gradient(to bottom, rgb(178, 97, 63), rgb(41, 41, 41));
+   font-size: 0.7em;  
+   font-style: normal;
+   width: 100%;
+}
+
+footer nav ul, footer section {
+   float: right;
+   padding: 10px 30px;
+   width: 20%;
+}
+
+footer section {
+   float: left;
+   padding: 5px 30px;
+   width: 40%;
+}
+
+footer nav ul a {
+   color: white;
+}
+
+footer nav ul a:hover {
+   text-decoration: underline;
+}
+
+footer::after {
+   display: table;
+   content: "";
+   clear: both;
+}
+
+/* ===============================
+   Mobile Styles: 0px to 640px 
+   ===============================
+*/
+@media only screen and (max-width: 640px) {
+
+   
+   a#navicon {
+      display: block;
+   }
+   
+   header nav {
+      padding-bottom: 5px;
+   }
+   
+   header nav ul {
+      display: none;
+   }
+   
+   header nav ul li {
+      font-size: 1em;
+      line-height: 1.3em;
+      height: 1.3em;
+   }
+   
+   a#navicon:hover+ul, header nav ul:hover {
+      display: block;
+   }
+   
+   header img#profilepicture {
+      width: 100%;
+   }
+   
+   
+   footer nav ul, footer section {
+      font-size: 1.2em;
+      width: 100%;
+   }
+}
+
+
+/* =============================================
+   Tablet and Desktop Styles: greater than 640px
+   =============================================
+*/
+@media only screen and (min-width: 641px) {
+    
+   header nav ul {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+      -webkit-justify-content: center;
+      justify-content: center;
+   }
+   
+   header nav ul li {
+      -webkit-flex: 0 1 auto;
+      flex: 0 1 auto;
+   }
+}
