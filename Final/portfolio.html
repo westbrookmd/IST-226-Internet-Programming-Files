@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
    <!--
-      Final Lab Project: Marshall Westbrook Portfolio
+      Final Lab Project: Marshall Westbrook's Portfolio
       Author: Marshall Westbrook
       Date:  12/02/2021
 
@@ -13,104 +13,273 @@
    <meta charset="utf-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1" />
    <title>Marshall Westbrook's Portfolio</title>
-   <link href="p_base.css" rel="stylesheet" />
+   <!--External stylesheet as the rubric specifies.-->
    <link href="p_layout.css" rel="stylesheet" />
    <script src="p_script.js" defer> </script> 
 </head>
 
-<header>
-   <img src="mw_profile.JPG" alt="Marshall Westbrook's Portrait" id="profilepicture"/>
-   <h1 id="title">Marshall Westbrook's<br> Portfolio</h1>
-   <h3 id="contactinfo">Contact Information:<br>Phone: (000) 000 - 0000<br>Email: ywestbmd@my.gvltec.edu</h3>
-   <nav> <a id="navicon" href="#"><img src="p_navicon.png" alt="" /></a>
-      <ul>
-         <li><a href="#">Home</a></li>
-         <li><a href="#">Portfolio</a></li>
-         <li><a href="#">Contact me</a></li>
-      </ul>
-   </nav>
-</header>
-
-<section id="leftbar">
-   <p>sample text</p>
-</section>
-
 <body>
+   <div class="wrapper">
+   <header class="siteheader" id="siteheader">
+      <div class="wrapper site-header__wrapper">
+         <img src="mw_profile.JPG" alt="Marshall Westbrook's Portrait" class="profilepicture"/>
+         <h2 class="title">Marshall Westbrook's Portfolio</h2>
+         <h3 class="contactinfo"><a href="#contactme">Contact Information:<br>Phone: (000) 000 - 0000<br>Email: ywestbmd@my.gvltec.edu</a></h3>
+         <nav class="nav">
+            <ul>
+               <li><a href="#siteheader">Home</a></li>
+               <li><a href="#portfolio">Portfolio</a></li>
+               <li><a href="#javavideo">Showcase Video</a></li>
+               <li><a href="#projectedschedule">Projected Schedule</a></li>
+               <li><a href="#contactme">Contact me</a></li>
+            </ul>
+         </nav>
+      </div>
+   </header>
+
+   <section class="leftbar">
+      <h6>Navigation Bar</h6>
+      <nav>        
+         <a href="#siteheader">Home</a><br>
+         <a href="#portfolio">Portfolio</a><br>
+         <a href="#javavideo">Showcase Video</a><br>
+         <a href="#projectedschedule">Projected Schedule</a><br>
+         <a href="#contactme">Contact me</a>
+      </nav>
+   </section>
+
+   <section class="rightbar">
+      <h2>Latest Projects</h2>
+      <ol>
+         <li><a href="#chapter10">Chapter 10</a></li>
+         <li><a href="#chapter9">Chapter 9</a></li>
+         <li><a href="#chapter8">Chapter 8</a></li>
+         <li><a href="#chapter7">Chapter 7</a></li>
+         <li><a href="#chapter6">Chapter 6</a></li>
+         <li><a href="#chapter5">Chapter 5</a></li>
+      </ol>
+
+      <h2>My Socials</h2>
+      <ol>
+         <li><a href="https://github.com/westbrookmd">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/marshall-westbrook/">LinkedIn</a></li>
+      </ol>
+   </section>
+
    <section id="portfolio">
       <h2>My Portfolio: Graded Practice Files from IST226</h2>
       <div class="chapters">
-         <button type="button" class="chapter0">Chapter 0</button>
-         <div id="content">
-            <h3>Chapter 0</h3>
-            <img src="Chapter0.png" alt="" />
-            <p>Description of class</p>
+         <button type="button" class="chapter0">Web Server Setup</button>
+         <div id="chapter0">
+            <h3><a href="http://ist226westbrookmd.atwebpages.com/chapter0/hello226.html">Live Link: Web Server Setup</a></h3>
+            <img src="Chapter0.png" alt="Screenshot of the first graded practice file." />
+            <p>Creating a web server account and submitting a test page to demonstrate our knowledge and completion of this step.</p>
          </div>
          <br>
          <button type="button" class="chapter1">Chapter 1</button>
          <div id="chapter1">
-            <h3>Chapter 1</h3>
-            <p>Description of class</p>
+            <h3><a href="http://ist226westbrookmd.atwebpages.com/chapter1/ct_start.html">Live Link: Chapter 1</a></h3>
+            <img src="Chapter1.png" alt="Screenshot of the second graded practice file." />
+            <p>A basic introduction to HTML5. Covered learning about networks, web pages, web servers, the history of HTML, elements,
+               file creation, character encoding, and basic grouping via lists. Additionally covered using classes and id attributes to
+               better organize pages.
+            </p>
          </div>
          <br>
          <button type="button" class="chapter2">Chapter 2</button>
          <div id="chapter2">
-            <h3>Chapter 2</h3>
-            <p>Description of class</p>
+            <h3><a href="http://ist226westbrookmd.atwebpages.com/chapter2/tss_home.html">Live Link: Chapter 2</a></h3>
+            <img src="Chapter2.png" alt="Screenshot of the third graded practice file." />
+            <p>This chapter introduced style sheets through Cascading Style Sheets (CSS). This chapter discussed using different font
+               sizes and learning about scaling to the appropriate view port. A brief introduction to padding, margins, classes, and more.
+            </p>
          </div>
          <br>
          <button type="button" class="chapter2">Chapter 3</button>
          <div id="chapter3">
-            <h3>Chapter 3</h3>
-            <p>Description of class</p>
+            <h3><a href="http://ist226westbrookmd.atwebpages.com/chapter3/pc_home.html">Live Link: Chapter 3</a></h3>
+            <img src="Chapter3.png" alt="Screenshot of the fourth graded practice file." />
+            <p>This chapter covered page layouts. Fixed, fluid, elastic, and grid layouts were covered. Positioning was
+               emphasized to explain how to not corner your design into just using grids. </p>
          </div>
          <br>
          <button type="button" class="chapter4">Chapter 4</button>
          <div id="chapter4">
-            <h3>Chapter 4</h3>
-            <p>Description of class</p>
+            <h3><a href="http://ist226westbrookmd.atwebpages.com/chapter4/tb_komatsu.html">Live Link: Chapter 4</a></h3>
+            <img src="Chapter4.png" alt="Screenshot of the fifth graded practice file." />
+            <p>This chapter covered graphic design using CSS. This was a lot of information to cover. Most of the difficult parts for me
+               were concerned with images, whether it be changing background images or editing images with CSS transforms or filters. Gradients
+               were my favorite part of this chapter.
+            </p>
          </div>
          <br>
          <button type="button" class="chapter5">Chapter 5</button>
          <div id="chapter5">
-            <h3>Chapter 5</h3>
-            <p>Description of class</p>
+            <h3><a href="http://ist226westbrookmd.atwebpages.com/chapter5/tf_home.html">Live Link: Chapter 5</a></h3>
+            <img src="Chapter5.png" alt="Screenshot of the sixth graded practice file." />
+            <p>This chapter was focused on mobile web design. This introduced responsive design (which I tried my hardest to design this portfolio
+               as a responsive layout). Flexible boxes, flexible items, and flex box layouts were the hardest parts for me to grasp. 
+            </p>
          </div>
          <br>
          <button type="button" class="chapter6">Chapter 6</button>
          <div id="chapter6">
-            <h3>Chapter 6</h3>
-            <p>Description of class</p>
+            <h3><a href="http://ist226westbrookmd.atwebpages.com/chapter6/dlr_evenings.html">Live Link: Chapter 6</a></h3>
+            <img src="Chapter6.png" alt="Screenshot of the seventh graded practice file." />
+            <p>This chapter was about tables and columns. Table borders, spans for rows and columns, and using groups were the highlights that I
+               really paid close attention to. Column layouts were hard to grasp at first, but I really began to understand them from this graded
+               practice file. </p>
          </div>
          <br>
          <button type="button" class="chapter7">Chapter 7</button>
          <div id="chapter7">
-            <h3>Chapter 7</h3>
-            <p>Description of class</p>
+            <h3><a href="http://ist226westbrookmd.atwebpages.com/chapter7/rb_survey.html">Live Link: Chapter 7</a></h3>
+            <img src="Chapter7.png" alt="Screenshot of the eighth graded practice file." />
+            <p>This chapter and graded practice was focused on web forms. I never knew how many different types of input there were before this 
+               chapter. The input type that I feel like I will use the most (that I didn't know about before) is the "tel" input type. Being
+               able to use this type to give mobile users a number pad by default is great.
+            </p>
          </div>
          <br>
          <button type="button" class="chapter8">Chapter 8</button>
          <div id="chapter8">
-            <h3>Chapter 8</h3>
-            <p>Description of class</p>
+            <h3><a href="http://ist226westbrookmd.atwebpages.com/chapter8/cp_royal.html">Live Link: Chapter 8</a></h3>
+            <img src="Chapter8.png" alt="Screenshot of the ninth graded practice file." />
+            <p>This chapter and graded practice was all about multimedia. I really enjoyed this graded practice because it had an excellent
+               video that encouraged transitions, key frames, and a cue text. Additionally, learning about how pages with transitions are 
+               rendered was really interesting.
+            </p>
          </div>
          <br>
          <button type="button" class="chapter9">Chapter9</button>
          <div id="chapter9">
-            <h3>Chapter 9</h3>
-            <p>Description of class</p>
+            <h3><a href="http://ist226westbrookmd.atwebpages.com/chapter9/tny_clock.html">Live Link: Chapter 9</a></h3>
+            <img src="Chapter9.png" alt="Screenshot of the tenth graded practice file." />
+            <p>This chapter and graded practice was all about JavaScript. JavaScript was not something I expected to learn in this class,
+               but it very quickly became something that I sought out and read about since it is still very new to me. Learning how to
+               dynamically change HTML code via JavaScript is something that is amazing once you get the hang of it. I utilized event handlers
+               in this page for each of the chapters of my portfolio thanks to this chapter.
+            </p>
          </div>
          <br>
          <button type="button" class="chapter10">Chapter 10</button>
          <div id="chapter10">
-            <h3>Chapter 10</h3>
-            <p>Description of class</p>
+            <h3><a href="http://ist226westbrookmd.atwebpages.com/chapter10/lht_august.html">Live Link: Chapter 10</a></h3>
+            <img src="Chapter10.png" alt="Screenshot of the eleventh graded practice file." />
+            <p>This chapter and graded practice described how arrays, loops, and conditional statements work in JavaScript. This chapter made
+               me realize how different JavaScript really is compared to Java, C#, Python, and basically any other language I have used. Not
+               having the strict typing that C# and Java offer is really aggravating. I expect to learn TypeScript in the near-future to 
+               work around this feature. I like how mapping and filtering was described very early in this chapter. Most other books that I have
+               read wait so long before introducing these concepts but I feel as if they are critical to learn early.
+            </p>
          </div>
       </div>
-      
    </section>
-   
 
+   <section id="javavideo">
+      <h2>Showcase: Java 236 Assignment</h2>
+      <video  controls class="javavideo">
+         <source src="assignment11.webm" type="video/webm">
+         <source src="assignment11_video.mp4" type="video/mp4">
+         Your browser is not compatible with the WEBM video format.
+      </video>
+      <audio controls class="javaaudio">
+         <source src="assignment11.mp4" type="audio/mp4">
+         Your browser is not compatible with the MP3 audio format.
+      </audio>
+      <p>This is a project I recently finished in a basic Java course at Greenville Technical College. In this video,
+         I narrate the basic usage of the program to encrypt and decrypt data. I have an audio player below it if
+         you prefer that format instead.</p>
+   </section>
 
+   <section  id="projectedschedule">
+      <h2>Projected Schedule for Upcoming Semester</h2>
+      <table class="projectedscheduletable">
+         <colgroup id="colgroup-projectedschedule">
+            <col span="1" id="class">
+            <col span="1" id="semester">
+            <col span="1" id="skills">
+         </colgroup>
+         <thead>
+            <tr>
+               <th>Class</th>
+               <th>Semester</th>
+               <th>Notable Skills</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>C# Programming II</td>
+               <td rowspan="5">Spring 2022</td>
+               <td>.NET, Windows Forms, WPF</td>
+            </tr>
+            <tr>
+               <td>Advanced Java Programming</td>
+               <td>Advanced Java Concepts, JavaFX</td>
+            </tr>
+            <tr>
+               <td>Data Communications</td>
+               <td>Signaling, Networking, Transmission Types</td>
+            </tr>
+            <tr>
+               <td>Relational Database</td>
+               <td>SQL, Relational DB Design, Embedded SQL Programming</td>
+            </tr>
+            <tr>
+               <td>Interpersonal Communication</td>
+               <td>Interpersonal Relationship Skills</td>
+            </tr>
+      </tbody>
+      </table>
+   </section>
 
+   <section id="contactme">
+      <form onsubmit="return confirm('Data sent to me via email. Thank you!');" >
+         <h2>Contact Me</h2>
+         <div class="contactme-row1">
+            <label for="name" class="contactme-label">Your name:</label>
+            <input type="text" id="name" class="contactme-form" required>
+         </div>
+         <div class="contactme-row2">
+            <label for="email" class="contactme-label">Your email:</label>
+            <input type="email" id="email" class="contactme-form" required>
+         </div>
+         <div class="contactme-row3">
+            <label for="phonenumber" class="contactme-label">Your phone number:</label>
+            <input type="tel" id="phonenumber" class="contactme-form" required>
+         </div>
+         <div class="contactme-row4">
+            <label for="companyname" class="contactme-label">Your company's name:</label>
+            <input type="text" id="companyname" class="contactme-form" required>
+         </div>
+         <div class="contactme-row5">
+            <button type="submit" id="contactme-submit" class="contactme-button">Submit</button>
+            <button type="reset" id="contactme-reset" class="contactme-button">Reset</button>
+         </div>
+      </form>
+      <p id="contactinfo">
+      Contact Information:<br>Phone:<a href="tel:+10000000000">(000) 000 - 0000</a><br>Email: <a href="mailto:ywestbmd@my.gvltec.edu">ywestbmd@my.gvltec.edu</a>
+      </p>
+   </section>
 
+   <section id="footer">
+      <footer class="footer">
+         <ul>
+            <li>
+               <h6>
+               Last Edited: December 4th, 2021</h6>
+            </li>
+            <li>
+               Greenville Technical College
+            </li>
+            <li>
+               IST 226 W01: Internet Programming
+            </li>
+            <li>
+               Instructor: Lisa Branham
+            </li>
+         </ul>
+      </footer>
+</section>
+</div>
 </body> 

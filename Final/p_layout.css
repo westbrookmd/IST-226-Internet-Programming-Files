@@ -1,201 +1,428 @@
-@charset "utf-8";
-
-
-/*
-  
-   Filename:   p_layout.css
-
-*/
-
-
-/* HTML and Body styles */
-
 html {
    font-family: Verdana, Geneva, sans-serif;
-   height: 100%;
-}
-
-body {
-   background-color: #cad2c5;
-   color: #3c153b;
-   box-shadow: rgb(51, 51, 51) 10px 0px 40px, rgb(51, 51, 51) -10px 0px 40px;
-   border-left: 1px solid gray;
-   border-right: 1px solid gray;
-   min-height: 100%;   
-   margin: 0px auto;
-   min-width: 400px;
-   max-width: 1024px;   
-   width: 100%;
+   
 }
 
 
+footer, header, main, nav, section { 
+   display: block;
+}
+
+body, div, footer, 
+h1, h2, h3, h4, h5, h6, header, html, img, 
+li, main, nav, nav a, ol, p, section, span, ul,
+table, tr, td, th, col, colgroup {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   background: transparent;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;  
+}
 /* Header styles */
-
-header {
-    background-color: #7f7eff;
-    color: white;
-    display: flex;
-    flex-flow: row wrap;
-    gap: 10px;
+body {
+   background: linear-gradient(gray, rgb(115, 147, 179));
+   color: #3c153b;
+   display:flex;
+   flex-direction: column;
+   line-height: 1.2em;
 }
 
-header img#profilepicture {
-   order: 0;
-   max-height: 20%;
-   max-width: 20%;
-   border: 6px solid white;
+ul, ol {
+   list-style: none;
 }
 
-header h1#title {
-   order:1;
-   align-self: center;
-   text-align: center;
-   font-size: 2em;
-   line-height: 100%;
+nav ul {
+   list-style: none;
+   list-style-image: none;
 }
 
-header h3#contactinfo
+nav a {
+   text-decoration: none;
+}
+
+.site-header__wrapper, .title, .nav
 {
-   position: absolute;
-   right: 17vw;
-   font-size: .8em;
+   flex: 1;
 }
 
+.siteheader {
+   background: linear-gradient(#7f7eff, rgb(216, 230, 250));
+   color: white;
+   gap: 1rem;
+   display:flex;
+   justify-content: space-between;
+   height: 100%;
+   min-height: 200px;
+   width:100%;
+   flex-basis: 100%;
+}
+
+.site-header__wrapper
+{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content:baseline;
+   
+}
+
+.profilepicture {
+   max-height: 13vh;
+   max-width: 13vh;
+   border: 6px solid white;
+   order:0;
+   margin-left:.2rem;
+   transform-style: preserve-3d;
+   transform: rotateX(-20deg);
+   filter: drop-shadow(5px 5px 5px black);
+}
+
+.title{
+   display:flex;
+   justify-content: center;
+   flex-basis: 30%;
+   font-size: 1.5rem;
+   padding: 1%;
+   line-height: 1.5rem;
+}
+
+.contactinfo
+{
+   display: flex;
+   order:1;
+   justify-content: flex-end;
+   font-size: .8em;
+   margin-right:.2rem;
+}
+
+.contactinfo a
+{
+   color:white;
+   text-decoration: none;
+}
 
 /* Navigation list styles */
 
-header nav {
-   order:3;
-   width: 100%;
+.nav {
+   width: 60%;
+   flex: 1 0 100%;
+   order: 2;
+   margin: -.4rem -.2rem -.1rem -.2.1rem;
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+   display: flex;
+   flex-basis: 100%;
+   background-color: black;
 }
 
-header nav ul li {
-   font-size: 1em;
-   width:20%;  
+.nav ul li {
+   font-size: 1em;   
 }
 
-header nav ul li a {
+.nav ul li a {
    color: white;
-   display: block;
-   padding: 5px 20px;
-   width: 100%;
+   padding: 1vh 1vh;
 }
 
-header nav ul li a:hover {
+.nav ul li a:hover {
+   color: #7f7eff;
+}
+
+
+/* Main content */
+
+.leftbar
+{
+   padding: 1%;
+   width: 15%;
+   height:100%;
+   min-height: 200px;
+   position: -webkit-sticky;
+   position: sticky;
+   top:1%;
+   margin-top:1rem;
+   margin-left:.2rem;
+   background: linear-gradient(#60594d, rgb(0,0,0));
+   overflow: auto;
+   float: left;
+}
+
+.leftbar a, .leftbar h6
+{
+   color: white;
+   line-height: 2rem;
+}
+
+.leftbar h6
+{
+   font-size: .8rem;
+   text-decoration: underline;
+}
+
+.leftbar a:hover
+{
+   color:#7f7eff;
+}
+
+.rightbar
+{
+   padding: 1%;
+   width: 22.5%;
+   height:100%;
+   min-height: 200px;
+   position: -webkit-sticky;
+   position: sticky;
+   margin-top:1rem;
+   margin-right:.2rem;
+   background-image: url("tile.jpg");
+   overflow: auto;
+   float: right;
    color: black;
+   line-height: 2rem;
 }
 
-a#navicon {
-   display: none;
-}
-
-/* Column Styles */
-section#leftbar
+.rightbar ol
 {
-    clear: left;
-    float: left;
-    padding: 1%;
-    width: 15%;
-    height:100%;
-    position: fixed;
-    background: #60594d;
-    font-size: 10%vw;
-    color:white;
+   text-indent: 1.2rem;
 }
 
-section#portfolio
+.rightbar a
 {
-    position:absolute;
-    padding-top: 2%;
-    padding-left: 18%;
-    display: flex;
-    flex-direction: column;
-
+   color:black;
 }
+
+.rightbar a
+{
+   color: black;
+   line-height: 2rem;
+   text-decoration: none;
+}
+
+.rightbar a:hover
+{
+   color:#7f7eff;
+}
+
+
+section#portfolio, .leftbar, section#contactme, .rightbar, section#projectedschedule, section#javavideo{
+   border: .3rem solid black;
+   border-radius: 20px;
+   padding: 15px;
+}
+
+section#portfolio, section#contactme, section#projectedschedule, section#javavideo
+{
+   margin-top: 1rem;
+   margin-left: 16%;
+   margin-bottom: 2rem;
+   height: 100%;
+   min-height: 400px;
+   width: 60%;
+   display: flex;
+   flex-direction: column;
+   background-color: #cad2c5;
+}
+
+div.chapters
+{
+   line-height: 1.8rem;
+}
+
 div.chapters > div
 { 
-    display: flex;
-    flex-direction: column;
-    display: none;
-    
-    
+   display: flex;
+   flex-direction: column;
+   display: none; 
+   border:.3rem solid black;
 }
+
+div.chapters > div a
+{
+   color: green;
+}
+
+div.chapters > div a:hover
+{
+   color: #7f7eff;
+}
+
+
 section#portfolio > .chapters > div > img
 {
-    width:30%;
-    height:30%;
-    align-self: center;
+   width:60%;
+   height:60%;
+   align-self: center;
+   border: .2rem solid black;
+   border-radius: 20px;
+}
+
+section#contactme h2
+{
+   text-align: center;
+}
+
+.contactme-label, .contactme-form, .contactme-button, section#contactme #contactinfo
+{
+   line-height: 1.5rem;
+   width: 100%;
+   display:block;
+   margin:auto;
+   text-align: center;
+}
+
+.contactme-form
+{
+   min-height: 20px;
+   min-width: 100px;
+   max-height: 30px;
+   max-width: 300px;
+}
+
+.contactme-button
+{
+   margin-top: .6rem;
+   min-width: 80px;
+   max-width: 120px;
+}
+
+.contactme-row1 input, .contactme-row2 input, .contactme-row3 input, .contactme-row4 input
+{
+   display:block;
+}
+
+
+section#javavideo h2
+{
+   text-align: center;
+}
+
+.javavideo
+{
+   width:320;
+   height:250;
+   position:relative;
+   width:80%;
+   height:80%;
+   display:block;
+   margin: auto;
+}
+.javaaudio
+{
+   margin:auto;
+   padding: 1rem;
+}
+
+
+.projectedscheduletable
+{
+   display:table-header-group;
+   border: 1px solid black;
+   border-collapse: collapse;
+   width:fit-content;
+   overflow: auto;
+}
+
+colgroup#colgroup-projectedschedule #class
+{
+   background-color: white;
+}
+
+colgroup#colgroup-projectedschedule #semester
+{
+   background-color: coral;
+}
+
+colgroup#colgroup-projectedschedule #skills
+{
+   background-color: palegoldenrod;
+}
+
+
+.projectedscheduletable td, th
+{
+   padding: .8rem;
+   border: 1px solid black;
+   border-collapse: collapse;
 }
 
 /* Footer styles */   
 
-footer {
-   clear: both;
-   
+footer { 
    color: white;    
-   background: linear-gradient(to bottom, rgb(178, 97, 63), rgb(41, 41, 41));
-   font-size: 0.7em;  
+   background: linear-gradient(to bottom, rgb(128, 128, 128), rgb(169, 169, 169));
+   font-size: 1em;  
    font-style: normal;
    width: 100%;
+   border-top: 10px solid black;
+   text-align: center;
+   padding-top:1em;
+   padding-bottom:1em;
 }
 
-footer nav ul, footer section {
-   float: right;
-   padding: 10px 30px;
-   width: 20%;
-}
 
-footer section {
-   float: left;
-   padding: 5px 30px;
-   width: 40%;
-}
 
-footer nav ul a {
-   color: white;
-}
 
-footer nav ul a:hover {
-   text-decoration: underline;
-}
 
-footer::after {
-   display: table;
-   content: "";
-   clear: both;
-}
 
 /* ===============================
    Mobile Styles: 0px to 640px 
    ===============================
 */
 @media only screen and (max-width: 640px) {
-
    
-   a#navicon {
-      display: block;
-   }
-   
-   header nav {
+   .nav {
       padding-bottom: 5px;
    }
    
-   header nav ul {
-      display: none;
-   }
+
    
-   header nav ul li {
+   .nav ul li {
       font-size: 1em;
       line-height: 1.3em;
       height: 1.3em;
    }
    
-   a#navicon:hover+ul, header nav ul:hover {
-      display: block;
+   .profilepicture {
+      min-height: 150px;
+      min-width: 150px;
    }
-   
-   header img#profilepicture {
-      width: 100%;
+
+   .title{
+      padding:20px;
+   }
+
+   .leftbar, .rightbar{
+      display:none;
+      visibility: hidden;
+   }
+
+
+   section#portfolio, section#contactme, section#projectedschedule, section#javavideo
+   {
+      margin-top: 1vh;
+      margin-left: 1vw;
+      width:95%;
+   }
+
+   section#projectedschedule > table
+   {
+      border: none;
+      margin:-1px;
+      padding:0px;
+      width:auto;
+      height:auto;
+      font-size:.5rem;
+
+   }
+
+   .chapters > div > img
+   {
+      min-height: 200px;
+      min-width: 200px;
+      width: 80%;
+      height: 80%;
    }
    
    
@@ -211,7 +438,7 @@ footer::after {
    =============================================
 */
 @media only screen and (min-width: 641px) {
-    
+   
    header nav ul {
       display: -webkit-flex;
       display: flex;
